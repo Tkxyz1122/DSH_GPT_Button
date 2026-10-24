@@ -4,7 +4,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import path from 'node:path'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
-const pluginPath = path.join(here, '..', 'dsh-quick-launcher', 'lib', 'index.js')
+const pluginPath = path.join(here, '..', 'lib', 'index.js')
 const mod = await import(pathToFileURL(pluginPath).href)
 const plugin = mod.default
 

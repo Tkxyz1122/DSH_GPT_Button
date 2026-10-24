@@ -4,6 +4,16 @@
 **左键一键启动**（加速器 → ChatGPT 桌面端），**右键**弹出「路径配置 / 重启」菜单。
 图标会在窗口里缓慢漂浮、碰边 Q 弹回弹，背景是 DeepSeek 风格渐变蓝 × 10% 不透明度，能透出后面的文字。
 
+## ✨ 在 DSH 里直接安装
+
+打开 DSH 桌面端 → **插件管理 → 添加插件**，粘贴本仓库地址即可（网络慢可切换「中国大陆镜像源」）：
+
+```
+https://github.com/Tkxyz1122/GPT_Button
+```
+
+本仓库根目录就是插件包（`package.json` 在根上），因此**不需要下载解压**，直接用仓库地址安装。
+
 ![效果预览](docs/preview.png)
 
 > 图中左下角红框处就是本插件的圆形按钮，其余部分为 DSH 主界面。
@@ -34,20 +44,22 @@
 
 ## 安装（桌面客户端）
 
-1. 克隆或下载本仓库；
-2. 完全退出 DSH 客户端（含系统托盘）；
-3. 在 DSH 的**插件管理 / 插件市场**页面选择「从本地目录安装」，目录指向：
-   ```
-   <本仓库路径>\dsh-quick-launcher
-   ```
-4. 启动客户端，左下角 3 秒后出现圆形 GPT 按钮。
+1. 打开 DSH 桌面客户端 → **插件管理 → 添加插件**；
+2. 输入以下任意一种来源：
+   - **GitHub 仓库地址**（推荐）：`https://github.com/Tkxyz1122/GPT_Button`
+   - **本地目录**：本仓库根目录（包含 `package.json` 的那一层）
+3. 点「安装」，完成后**完全退出客户端（含系统托盘）再打开**；
+4. 左下角 3 秒后淡入出现圆形 GPT 按钮。
 
-> 桌面端的 profile 由客户端托管，命令行 `dsh plugin` 不接受 `--profile desktop`，必须走界面安装。
+![在 DSH 中添加插件](docs/install.png)
+
+> 桌面端 profile 由客户端托管，命令行 `dsh plugin` 不接受 `--profile desktop`，必须走界面安装。
+> 本仓库根目录即插件包，所以「GitHub 仓库地址」和「本地目录」两种方式都能装。
 
 ## 安装（dsh web）
 
 ```powershell
-dsh plugin --profile web add link:<本仓库绝对路径>\dsh-quick-launcher
+dsh plugin --profile web add link:<本仓库绝对路径>
 ```
 
 装完重启 `dsh web` 并刷新页面。
@@ -107,22 +119,22 @@ dsh plugin --profile web add link:<本仓库绝对路径>\dsh-quick-launcher
 ## 目录结构
 
 ```text
-GPT_Button/
+GPT_Button/                      ← 仓库根目录 = 插件包
 ├── README.md                    # 本文件
 ├── LICENSE                      # MIT
 ├── CHANGELOG.md
-├── .gitignore
+├── .gitignore / .gitattributes
+├── package.json                 # DSH bundle 元数据
+├── cordis.patch.yml             # 挂载声明
+├── icon.png                     # 插件列表图标（火箭）
+├── lib/index.js                 # 宿主半区：路由 + 启动/重启/配置
+├── assets/
+│   ├── launcher-widget.js       # 前端半区：圆形按钮 + 菜单 + 配置面板
+│   └── gpt-icon.png             # 悬浮按钮上的 GPT 图标
 ├── docs/
-│   └── preview.png              # 界面效果截图
-├── dsh-quick-launcher/          # 插件包（安装时指向这一层）
-│   ├── package.json             # DSH bundle 元数据
-│   ├── cordis.patch.yml         # 挂载声明
-│   ├── icon.png                 # 插件列表图标（火箭）
-│   ├── lib/index.js             # 宿主半区：路由 + 启动/重启/配置
-│   ├── assets/
-│   │   ├── launcher-widget.js   # 前端半区：圆形按钮 + 菜单 + 配置面板
-│   │   └── gpt-icon.png         # 悬浮按钮上的 GPT 图标
-│   └── README.md                # 插件内部说明（路由/配置/排错）
+│   ├── preview.png              # 界面效果截图
+│   ├── install.png              # 「添加插件」界面截图
+│   └── plugin-internal.md       # 插件内部说明（路由/配置/排错）
 ├── scripts/
 │   ├── convert-gpt-icon.py      # .ico → gpt-icon.png
 │   ├── make-plugin-icon.py      # 生成插件列表用的火箭图标
@@ -135,8 +147,8 @@ GPT_Button/
 
 | 文件 | 用途 |
 |---|---|
-| `dsh-quick-launcher/icon.png` | **插件管理列表**里的图标（小火箭，由 `scripts/make-plugin-icon.py` 生成），不影响按钮外观 |
-| `dsh-quick-launcher/assets/gpt-icon.png` | **悬浮按钮本体**上的 GPT 标志（由 `scripts/convert-gpt-icon.py` 从 .ico 转换） |
+| `icon.png` | **插件管理列表**里的图标（小火箭，由 `scripts/make-plugin-icon.py` 生成），不影响按钮外观 |
+| `assets/gpt-icon.png` | **悬浮按钮本体**上的 GPT 标志（由 `scripts/convert-gpt-icon.py` 从 .ico 转换） |
 
 ## 开发
 
@@ -155,8 +167,10 @@ node test/smoke-test.mjs
 ```powershell
 powershell -File scripts/sync-to-dsh.ps1
 # 或指定目标：
-powershell -File scripts/sync-to-dsh.ps1 -Destination "D:\你的\插件安装目录\dsh-quick-launcher"
+powershell -File scripts/sync-to-dsh.ps1 -Destination "D:\你的\插件安装目录"
 ```
+
+- 插件内部说明（路由清单 / 配置字段 / 排错）见 [`docs/plugin-internal.md`](docs/plugin-internal.md)
 
 ## 安全说明
 

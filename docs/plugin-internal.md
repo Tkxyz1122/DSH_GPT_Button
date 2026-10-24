@@ -19,7 +19,7 @@
 ## 目录结构
 
 ```text
-dsh-quick-launcher/
+GPT_Button/               ← 仓库根目录 = 插件包
 ├── package.json          # DSH bundle 插件元数据（dsh.bundle.patch）
 ├── cordis.patch.yml      # 挂载声明
 ├── icon.png              # 插件列表图标
@@ -28,7 +28,10 @@ dsh-quick-launcher/
 ├── assets/
 │   ├── launcher-widget.js# 前端半区：圆形按钮 + 右键菜单 + 路径配置
 │   └── gpt-icon.png      # 圆形按钮用的 ChatGPT 图标
-└── README.md
+├── docs/
+│   ├── preview.png       # 界面效果截图
+│   └── install.png       # 「添加插件」界面截图
+└── ...                   # scripts / test / README 等仓库辅助文件
 ```
 
 ## 宿主路由（全部只接受本机回环请求）
