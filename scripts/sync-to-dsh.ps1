@@ -9,10 +9,10 @@
 
 .EXAMPLE
 powershell -File scripts/sync-to-dsh.ps1
-powershell -File scripts/sync-to-dsh.ps1 -Destination "D:\_App\DeepSeek Harness\plugins\dsh-quick-launcher"
+powershell -File scripts/sync-to-dsh.ps1 -Destination "D:\_App\DeepSeek Harness\plugins\dsh-gpt-button"
 #>
 param(
-  [string]$Destination = $(if ($env:DSH_PLUGIN_DIR) { $env:DSH_PLUGIN_DIR } else { Join-Path $env:USERPROFILE '.dsh\profiles\desktop\node_modules\dsh-quick-launcher' })
+  [string]$Destination = $(if ($env:DSH_PLUGIN_DIR) { $env:DSH_PLUGIN_DIR } else { Join-Path $env:USERPROFILE '.dsh\profiles\desktop\node_modules\dsh-gpt-button' })
 )
 
 $ErrorActionPreference = 'Stop'

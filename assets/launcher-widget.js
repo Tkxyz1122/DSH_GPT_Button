@@ -1,4 +1,4 @@
-/* dsh-quick-launcher —— 前端半区（圆形图标版）
+/* dsh-gpt-button —— 前端半区（圆形图标版）
  * 悬浮圆形 GPT 图标：左键一键启动（Falemon → ChatGPT），右键菜单（设置 / 重启 Falemon / 重启 ChatGPT）。
  * 可拖动，位置存 localStorage；每 5 秒刷新运行状态。
  */

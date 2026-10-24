@@ -126,7 +126,7 @@ DSH_GPT_Button/                  ← 仓库根目录 = 插件包
 ├── .gitignore / .gitattributes
 ├── package.json                 # DSH bundle 元数据
 ├── cordis.patch.yml             # 挂载声明
-├── icon.png                     # 插件列表图标（火箭）
+├── icon.png                     # 插件列表图标（渐变蓝 + 星芒）
 ├── lib/index.js                 # 宿主半区：路由 + 启动/重启/配置
 ├── assets/
 │   ├── launcher-widget.js       # 前端半区：圆形按钮 + 菜单 + 配置面板
@@ -137,7 +137,7 @@ DSH_GPT_Button/                  ← 仓库根目录 = 插件包
 │   └── plugin-internal.md       # 插件内部说明（路由/配置/排错）
 ├── scripts/
 │   ├── convert-gpt-icon.py      # .ico → gpt-icon.png
-│   ├── make-plugin-icon.py      # 生成插件列表用的火箭图标
+│   ├── make-plugin-icon.py      # 生成插件列表图标（渐变蓝 + 星芒）
 │   └── sync-to-dsh.ps1          # 本地开发：把插件同步到已安装位置
 └── test/
     └── smoke-test.mjs           # 用模拟宿主跑路由冒烟测试
@@ -147,7 +147,7 @@ DSH_GPT_Button/                  ← 仓库根目录 = 插件包
 
 | 文件 | 用途 |
 |---|---|
-| `icon.png` | **插件管理列表**里的图标（小火箭，由 `scripts/make-plugin-icon.py` 生成），不影响按钮外观 |
+| `icon.png` | **插件管理列表**里的图标（渐变蓝底 + 星芒，由 `scripts/make-plugin-icon.py` 生成），不影响按钮外观 |
 | `assets/gpt-icon.png` | **悬浮按钮本体**上的 GPT 标志（由 `scripts/convert-gpt-icon.py` 从 .ico 转换） |
 
 ## 开发

@@ -1,4 +1,4 @@
-# dsh-quick-launcher —— DSH 快速启动组件
+# dsh-gpt-button —— DSH 快速启动组件
 
 在 DSH 桌面客户端**左下角**放一个**圆形 GPT 图标**：**左键一键启动**（加速器 → ChatGPT 桌面客户端），
 **右键菜单**提供「路径配置」「重启 <加速器名>」「重启 ChatGPT」（菜单标题「快速启动」居中、蓝色配色）。加速器路径、ChatGPT 的 AUMID、启动间隔都可在路径配置里改；
@@ -88,7 +88,7 @@ DSH_GPT_Button/           ← 仓库根目录 = 插件包
 桌面端 profile 由 Electron 客户端托管，命令行 `dsh plugin` 不认 `--profile desktop`。
 请在桌面客户端的会话里让 DSH 用内置 `plugin_manager` 安装本目录：
 
-> 请使用当前桌面端内置的 `plugin_manager` 安装本目录的 dsh-quick-launcher。
+> 请使用当前桌面端内置的 `plugin_manager` 安装本目录的 dsh-gpt-button。
 
 或从界面「插件管理」页从本地目录安装。安装完成后**完全退出客户端（含托盘）再重开**，
 左下角应出现「快速启动」小坞。
@@ -102,10 +102,10 @@ DSH_GPT_Button/           ← 仓库根目录 = 插件包
 
 ## 卸载
 
-从插件管理里移除 `dsh-quick-launcher`；用户配置文件 `.dsh-launch.json` 可保留（重装后继续用）。
+从插件管理里移除 `dsh-gpt-button`；用户配置文件 `.dsh-launch.json` 可保留（重装后继续用）。
 
 ## 排错
 
-- **左下角没有坞**：确认装到了 `desktop` profile；完全退出客户端重开；查看宿主日志有无 `[dsh-quick-launcher]` 报错。
+- **左下角没有坞**：确认装到了 `desktop` profile；完全退出客户端重开；查看宿主日志有无 `[dsh-gpt-button]` 报错。
 - **点启动没反应**：看设置里路径是否存在（橙点 = 路径失效）；ChatGPT 的 AUMID 形如 `OpenAI.Codex_2p2nqsd0c76g0!App`。
 - **启动失败提示文件不存在**：加速器升级后路径可能变了，去设置里改。

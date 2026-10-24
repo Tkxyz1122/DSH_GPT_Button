@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.0] - 2026-10-24
+
+- 插件包名由 `dsh-quick-launcher` 改为 `dsh-gpt-button`
+- 更换插件列表图标：DeepSeek 蓝渐变圆角底 + 白色圆形按钮 + 星芒
+- 仓库更名为 DSH GPT Button
+
 ## [0.1.0] - 2026-10-24
 
 首个可用版本：

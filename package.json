@@ -1,7 +1,7 @@
 {
-  "name": "dsh-quick-launcher",
-  "version": "0.1.0",
-  "description": "DSH 桌面端快速启动坞：在界面左下角一键启动 Falemon 加速器与 ChatGPT 桌面客户端，路径与延迟可在设置里配置。",
+  "name": "dsh-gpt-button",
+  "version": "0.2.0",
+  "description": "DSH 桌面端的圆形 GPT 启动按钮：一键启动加速器与 ChatGPT 桌面客户端，支持透明渐变外观、随机漂浮与路径配置。",
   "type": "module",
   "main": "lib/index.js",
   "icon": "./icon.png",
