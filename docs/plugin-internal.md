@@ -19,7 +19,7 @@
 ## 目录结构
 
 ```text
-GPT_Button/               ← 仓库根目录 = 插件包
+DSH_GPT_Button/           ← 仓库根目录 = 插件包
 ├── package.json          # DSH bundle 插件元数据（dsh.bundle.patch）
 ├── cordis.patch.yml      # 挂载声明
 ├── icon.png              # 插件列表图标

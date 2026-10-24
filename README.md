@@ -1,4 +1,4 @@
-# GPT_Button —— DSH 快速启动插件
+# DSH GPT Button —— DSH 快速启动插件
 
 在 [DeepSeek Harness（DSH）](https://github.com/deepseek-ai) 桌面客户端左下角放一枚**圆形 GPT 图标**：
 **左键一键启动**（加速器 → ChatGPT 桌面端），**右键**弹出「路径配置 / 重启」菜单。
@@ -121,7 +121,7 @@ dsh plugin --profile web add link:<本仓库绝对路径>
 ## 目录结构
 
 ```text
-GPT_Button/                      ← 仓库根目录 = 插件包
+DSH_GPT_Button/                  ← 仓库根目录 = 插件包
 ├── README.md                    # 本文件
 ├── LICENSE                      # MIT
 ├── CHANGELOG.md
