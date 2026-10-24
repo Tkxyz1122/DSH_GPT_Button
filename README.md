@@ -51,9 +51,7 @@ https://github.com/Tkxyz1122/DSH_GPT_Button
 3. 点「安装」，完成后**完全退出客户端（含系统托盘）再打开**；
 4. 左下角 3 秒后淡入出现圆形 GPT 按钮。
 
-<p align="center">
-  <img src="docs/install.png" width="60%" alt="在 DSH 中添加插件">
-</p>
+<img src="docs/install.png" width="60%" alt="在 DSH 中添加插件">
 
 > 桌面端 profile 由客户端托管，命令行 `dsh plugin` 不接受 `--profile desktop`，必须走界面安装。
 > 本仓库根目录即插件包，所以「GitHub 仓库地址」和「本地目录」两种方式都能装。
