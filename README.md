@@ -46,7 +46,7 @@ https://github.com/Tkxyz1122/GPT_Button
 
 1. 打开 DSH 桌面客户端 → **插件管理 → 添加插件**；
 2. 输入以下任意一种来源：
-   - **GitHub 仓库地址**（推荐）：`https://github.com/Tkxyz1122/GPT_Button`
+   - **GitHub 仓库地址**（推荐）：`https://github.com/Tkxyz1122/DSH_GPT_Button`
    - **本地目录**：本仓库根目录（包含 `package.json` 的那一层）
 3. 点「安装」，完成后**完全退出客户端（含系统托盘）再打开**；
 4. 左下角 3 秒后淡入出现圆形 GPT 按钮。
