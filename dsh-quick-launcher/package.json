@@ -1,0 +1,27 @@
+{
+  "name": "dsh-quick-launcher",
+  "version": "0.1.0",
+  "description": "DSH 桌面端快速启动坞：在界面左下角一键启动 Falemon 加速器与 ChatGPT 桌面客户端，路径与延迟可在设置里配置。",
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "./icon.png",
+  "files": [
+    "lib",
+    "assets",
+    "icon.png",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "launcher",
+    "quick-launch"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}

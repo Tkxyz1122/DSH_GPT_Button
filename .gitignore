@@ -1,0 +1,17 @@
+# 依赖与构建产物
+node_modules/
+dist/
+
+# 本机配置与备份（不要提交个人路径/设置）
+.dsh-launch.json
+*.bak
+
+# 系统与编辑器杂项
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
+.vscode/
+.idea/
