@@ -188,10 +188,9 @@ powershell -File scripts/sync-to-dsh.ps1 -Destination "D:\你的\插件安装目
 
 ## 许可与商标
 
-代码以 [MIT](LICENSE) 协议开源。
+本仓库的源代码以 [MIT](LICENSE) 许可证开源。
 
-ChatGPT 名称与标志为 OpenAI 的商标/版权资源，本仓库仅为个人本地使用示例，与 OpenAI 无关联；
-若你需要公开分发，请自行替换为可再分发的图标。
+仓库中出现的第三方产品名称与图标（例如 ChatGPT 名称与标志）归其各自权利人所有。MIT 许可证仅适用于本仓库的原创代码，不涵盖任何第三方商标、图标或其他权利资源。
 
 ## 致谢
 
