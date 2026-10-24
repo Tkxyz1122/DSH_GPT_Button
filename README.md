@@ -14,7 +14,9 @@ https://github.com/Tkxyz1122/DSH_GPT_Button
 
 本仓库根目录就是插件包（`package.json` 在根上），因此**不需要下载解压**，直接用仓库地址安装。
 
-![效果预览](docs/preview.png)
+<p align="center">
+  <img src="docs/preview.png" width="75%" alt="效果预览">
+</p>
 
 > 图中红框/箭头所指就是本插件的圆形按钮（默认在左下角，可拖动，也会在左侧栏内随机漂浮）。
 
