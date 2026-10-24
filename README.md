@@ -4,7 +4,9 @@
 **左键一键启动**（加速器 → ChatGPT 桌面端），**右键**弹出「路径配置 / 重启」菜单。
 图标会在窗口里缓慢漂浮、碰边 Q 弹回弹，背景是 DeepSeek 风格渐变蓝 × 10% 不透明度，能透出后面的文字。
 
-![插件图标](dsh-quick-launcher/icon.png)
+![效果预览](docs/preview.png)
+
+> 图中左下角红框处就是本插件的圆形按钮，其余部分为 DSH 主界面。
 
 > Windows 平台专用（依赖 `tasklist`、商店应用 AUMID 等 Windows 能力）。
 
@@ -110,14 +112,16 @@ GPT_Button/
 ├── LICENSE                      # MIT
 ├── CHANGELOG.md
 ├── .gitignore
+├── docs/
+│   └── preview.png              # 界面效果截图
 ├── dsh-quick-launcher/          # 插件包（安装时指向这一层）
 │   ├── package.json             # DSH bundle 元数据
 │   ├── cordis.patch.yml         # 挂载声明
-│   ├── icon.png                 # 插件列表图标
+│   ├── icon.png                 # 插件列表图标（火箭）
 │   ├── lib/index.js             # 宿主半区：路由 + 启动/重启/配置
 │   ├── assets/
 │   │   ├── launcher-widget.js   # 前端半区：圆形按钮 + 菜单 + 配置面板
-│   │   └── gpt-icon.png         # 按钮上的 GPT 图标
+│   │   └── gpt-icon.png         # 悬浮按钮上的 GPT 图标
 │   └── README.md                # 插件内部说明（路由/配置/排错）
 ├── scripts/
 │   ├── convert-gpt-icon.py      # .ico → gpt-icon.png
@@ -126,6 +130,13 @@ GPT_Button/
 └── test/
     └── smoke-test.mjs           # 用模拟宿主跑路由冒烟测试
 ```
+
+### 两个图标分别是干什么的
+
+| 文件 | 用途 |
+|---|---|
+| `dsh-quick-launcher/icon.png` | **插件管理列表**里的图标（小火箭，由 `scripts/make-plugin-icon.py` 生成），不影响按钮外观 |
+| `dsh-quick-launcher/assets/gpt-icon.png` | **悬浮按钮本体**上的 GPT 标志（由 `scripts/convert-gpt-icon.py` 从 .ico 转换） |
 
 ## 开发
 
