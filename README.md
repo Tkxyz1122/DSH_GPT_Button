@@ -9,7 +9,7 @@
 打开 DSH 桌面端 → **插件管理 → 添加插件**，粘贴本仓库地址即可（网络慢可切换「中国大陆镜像源」）：
 
 ```
-https://github.com/Tkxyz1122/GPT_Button
+https://github.com/Tkxyz1122/DSH_GPT_Button
 ```
 
 本仓库根目录就是插件包（`package.json` 在根上），因此**不需要下载解压**，直接用仓库地址安装。
