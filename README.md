@@ -16,7 +16,7 @@ https://github.com/Tkxyz1122/GPT_Button
 
 ![效果预览](docs/preview.png)
 
-> 图中红框处就是本插件的圆形按钮（默认在左下角，可拖动，也会在左侧栏内随机漂浮）。
+> 图中红框/箭头所指就是本插件的圆形按钮（默认在左下角，可拖动，也会在左侧栏内随机漂浮）。
 
 > Windows 平台专用（依赖 `tasklist`、商店应用 AUMID 等 Windows 能力）。
 
